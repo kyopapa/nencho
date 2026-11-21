@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>年末調整 書き方チェック｜きょうパパ</title>
+<meta name="description" content="はい・いいえで答えるだけで、年末調整で書く書類と欄がわかる。令和8年分の子育て特例（生命保険料控除）にも対応。">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MTCNYPDV2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4MTCNYPDV2');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: きょうパパが隣で一緒に申告書を見てくれる、やさしい会話
+IDEA: LINEのようなチャット。質問に答えるたびに会話が進み、最後に「書く欄」のまとめが届く
+PICTURE: ピーチ地に白い吹き出し、答えはコーラルの吹き出し。結果は丸い白カード
+COLOUR and TYPE: ピーチ#fff3ea・コーラル#f2795a・ミント#d6f0e4、M PLUS Rounded 1c
+LAYOUT: 1カラム最大560px。上部に固定ヘッダー、下部に固定の回答ボタン
+*/
+:root{color-scheme:light;--bg:#fff3ea;--ink:#4a3a33;--sub:#8a7168;--co:#f2795a;--cod:#c8553a;--pe:#ffe4d6;--mi:#d6f0e4;--mid:#23563f;--line:#f3d3c4;--w:#fff}
+*{box-sizing:border-box;min-width:0}
+html{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;height:100%;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+#scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;position:relative}
+.wrap{max-width:560px;margin:0 auto;padding:0 14px}
+header{flex:none;background:var(--co);color:#fff}
+.hd{display:flex;align-items:center;gap:12px;padding:10px 14px 8px;max-width:560px;margin:0 auto}
+.av{width:44px;height:44px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.hd b{display:block;font-size:16px;font-weight:800;line-height:1.3}
+.hd small{font-size:12px;opacity:.92}
+.pg{height:5px;background:rgba(255,255,255,.35)}
+.pg i{display:block;height:100%;width:0;background:#fff;transition:width .35s}
+.intro{padding:18px 0 4px;text-align:center}
+.intro h1{font-size:clamp(22px,6vw,28px);line-height:1.35;margin:0 0 4px;font-weight:800;text-wrap:balance}
+.intro p{margin:0;font-size:14px;color:var(--sub)}
+#chat{display:flex;flex-direction:column;gap:10px;padding:16px 0 20px}
+.bot,.me{max-width:84%;padding:12px 15px;font-size:16px;line-height:1.6;animation:pop .25s ease-out}
+.bot{align-self:flex-start;background:var(--w);border-radius:4px 20px 20px 20px;box-shadow:0 6px 16px -12px rgba(200,85,58,.6)}
+.bot.now{font-weight:700;font-size:17px;box-shadow:0 0 0 2px var(--co),0 10px 24px -14px rgba(200,85,58,.7)}
+.bot small{display:block;font-weight:500;font-size:13px;color:var(--sub);margin-top:4px}
+.bot.tip{background:var(--mi);color:var(--mid);font-weight:700;font-size:15px}
+.me{align-self:flex-end;background:var(--co);color:#fff;font-weight:700;border-radius:20px 4px 20px 20px}
+.row{display:flex;gap:8px;align-items:flex-end}
+.mini{width:30px;height:30px;border-radius:50%;background:var(--pe);display:flex;align-items:center;justify-content:center;flex:none}
+#bar{flex:none;background:var(--w);border-top:1.5px solid var(--line);padding:8px 14px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 20px -16px rgba(200,85,58,.6)}
+#bar .in{max-width:560px;margin:0 auto}
+.bl{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--sub);margin-bottom:4px}
+.ops{display:grid;gap:8px}
+.ops.two{grid-template-columns:1fr 1fr}
+button{font:inherit;cursor:pointer}
+.op{min-height:48px;border:2px solid var(--co);background:#fff;color:var(--cod);border-radius:28px;font-size:16px;font-weight:700;padding:8px 14px}
+.op.y{background:var(--co);color:#fff}
+.op.on{background:var(--pe)}
+.op:focus-visible,.lnk:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--cod);outline-offset:2px}
+.lnk{background:none;border:0;color:var(--sub);font-size:13px;font-weight:700;min-height:36px;padding:0 4px}
+.lnk[disabled]{opacity:.35;cursor:default}
+.go{margin-top:8px;width:100%;min-height:48px;border:0;border-radius:28px;background:var(--co);color:#fff;font-size:16px;font-weight:700}
+.go[disabled]{opacity:.4;cursor:default}
+.card{background:var(--w);border-radius:24px;padding:18px;margin:12px 0;box-shadow:0 14px 34px -22px rgba(200,85,58,.55)}
+.card h2{margin:0 0 4px;font-size:18px;line-height:1.4;font-weight:800}
+.card .s{margin:0 0 8px;font-size:13px;color:var(--sub)}
+.it{display:flex;gap:12px;padding:12px 0;border-top:1.5px dashed var(--line);cursor:pointer}
+.it input{width:22px;height:22px;flex:none;margin-top:3px;accent-color:var(--co)}
+.tag{display:inline-block;background:var(--pe);color:var(--cod);border-radius:12px;font-size:12px;font-weight:800;padding:1px 9px;margin-right:6px;white-space:nowrap}
+.it b{font-size:16px}
+.it p{margin:3px 0 0;font-size:14px;color:var(--sub);line-height:1.65}
+.it.done b,.it.done p{text-decoration:line-through;opacity:.5}
+.fld{display:grid;gap:4px;margin-bottom:10px}
+.fld label{font-size:14px;font-weight:700}
+.fld input{font:16px "M PLUS Rounded 1c",sans-serif;min-height:48px;border:2px solid var(--line);border-radius:14px;padding:8px 14px;background:#fffaf6;color:var(--ink);text-align:right;width:100%}
+.sw{display:flex;gap:10px;align-items:center;font-size:15px;font-weight:700;margin:6px 0 12px;min-height:44px;background:var(--mi);color:var(--mid);border-radius:14px;padding:8px 12px}
+.sw input{width:22px;height:22px;accent-color:var(--mid);flex:none}
+.res{background:var(--co);color:#fff;border-radius:20px;padding:16px;margin-top:6px}
+.big{font-size:clamp(34px,10vw,44px);font-weight:800;line-height:1.1;white-space:nowrap}
+.res table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+.res td{padding:5px 0;border-top:1px solid rgba(255,255,255,.35)}
+.res td:last-child{text-align:right;white-space:nowrap}
+.plus{margin-top:10px;background:rgba(255,255,255,.2);border-radius:12px;padding:8px 10px;font-size:14px}
+.line{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:28px;background:#06c755;color:#fff;font-weight:800;text-decoration:none;font-size:17px;margin-top:12px}
+.sl{font-size:14px;font-weight:700;margin-top:10px}
+.step{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:4px;background:#fff;border-radius:28px;padding:6px}
+.step button{width:52px;height:52px;border-radius:50%;border:0;background:var(--co);color:#fff;font-size:26px;font-weight:800;line-height:1}
+.step button[disabled]{opacity:.35}
+.step span{font-size:20px;font-weight:800;color:var(--ink)}
+.chk{margin-top:14px;background:var(--pe);border-radius:18px;padding:16px;color:var(--cod)}
+.chk b{font-size:16px;line-height:1.6;display:block}
+.per{margin:10px 0 0;font-size:15px;font-weight:700;color:var(--ink)}
+.per.warn{color:var(--cod)}
+.per .n{font-size:22px}
+.hint{margin:8px 0 0;text-align:center;font-size:14px;color:var(--ink)}
+.hint b{color:var(--cod)}
+.note{font-size:12px;color:var(--sub);line-height:1.75;padding:0 4px 30px}
+.note li{margin-bottom:4px}
+.redo{display:block;margin:6px auto 0;min-height:44px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:24px;padding:0 20px;font-weight:700}
+.hide{display:none!important}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.bot,.me{animation:none}.pg i{transition:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="hd">
+<div class="av"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f2795a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+<div><b>きょうパパの年末調整チェック</b><small>令和8年分・子育て世帯向け</small></div>
+</div>
+<div class="pg"><i id="pg"></i></div>
+</header>
+
+<div id="scroll"><main class="wrap" id="main">
+<div class="intro" id="intro">
+<h1>書く場所、いっしょに探そう</h1>
+<p>はい・いいえで答えるだけ。約2分で終わります</p>
+</div>
+<div id="done" class="hide">
+<div class="row" style="padding-top:16px"><div class="mini"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f2795a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><div class="bot tip">おつかれさまでした！<br>あなたが書くところをまとめました。書き終えたらチェックしてね。</div></div>
+<button class="lnk" id="showChat" style="display:block;margin:8px auto 0">答えた内容を見る ▼</button>
+</div>
+<div id="chat" aria-live="polite"></div>
+<div id="after" class="hide"></div>
+
+<div class="card hide" id="calcCard">
+<h2>生命保険料控除をかんたん計算</h2>
+<p class="s">控除証明書の「申告額（12月までの見込み額）」を入れてください。所得税の控除額を計算します。</p>
+<label class="sw"><input type="checkbox" id="u23">23歳未満の扶養親族がいる（子育て特例）</label>
+<div class="fld"><label for="c1">一般生命保険料（新）</label><input id="c1" inputmode="numeric" placeholder="0"></div>
+<div class="fld"><label for="c2">一般生命保険料（旧）</label><input id="c2" inputmode="numeric" placeholder="0"></div>
+<div class="fld"><label for="c3">介護医療保険料</label><input id="c3" inputmode="numeric" placeholder="0"></div>
+<div class="fld"><label for="c4">個人年金保険料（新）</label><input id="c4" inputmode="numeric" placeholder="0"></div>
+<div class="fld"><label for="c5">個人年金保険料（旧）</label><input id="c5" inputmode="numeric" placeholder="0"></div>
+<div class="res">
+<div style="font-size:14px;font-weight:700">生命保険料控除（所得税）</div>
+<div class="big" id="tot">0円</div>
+<table><tbody id="bd"></tbody></table>
+<div class="plus" id="plus"></div>
+</div>
+<div class="chk">
+<b>保険料の目安は、大人1人月5,000円・子ども1人月2,000円。これより多いなら払いすぎの可能性があります。一度確認しましょう。</b>
+<p style="margin:12px 0 0;font-size:13px;font-weight:500;color:var(--sub)">保険に入っている人数を選んでください（個人年金保険は除いて計算）</p><div class="sl">大人</div><div class="step"><button type="button" data-t="ad" data-d="-1" aria-label="大人を1人へらす">−</button><span id="adv">1人</span><button type="button" data-t="ad" data-d="1" aria-label="大人を1人ふやす">＋</button></div><div class="sl">子ども</div><div class="step"><button type="button" data-t="kd" data-d="-1" aria-label="子どもを1人へらす">−</button><span id="kdv">0人</span><button type="button" data-t="kd" data-d="1" aria-label="子どもを1人ふやす">＋</button></div>
+<p id="per" class="per"></p>
+<a class="line" href="https://lin.ee/728PfBV" target="_blank" rel="noopener" data-p="calc">LINEで保険チェックを申し込む</a>
+<p class="hint">トーク画面で<b>「保険チェック」</b>と送ってください</p>
+</div>
+</div>
+
+<div class="card hide" id="cta">
+<div class="row" style="align-items:flex-start">
+<div class="mini"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f2795a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+<div>
+<h2>その保険、今の家族に合っていますか？</h2>
+<p class="s" style="font-size:14px;margin:4px 0 0">控除証明書が手元にある今が、保険を見直すいちばんのタイミング。子育て世帯専門のFPが、払いすぎの保険料を無料でチェックします。</p>
+</div>
+</div>
+<a class="line" href="https://lin.ee/728PfBV" target="_blank" rel="noopener" data-p="bottom">LINEで保険チェックを申し込む</a>
+<p class="hint">トーク画面で<b>「保険チェック」</b>と送ってください</p>
+<p class="s" style="text-align:center;margin:8px 0 0">きょうパパ｜家計管理ママの為の子育てFP</p>
+</div>
+
+<div id="end" class="hide">
+<button class="redo" id="redo">最初から答え直す</button>
+<ul class="note">
+<li>このツールは年末調整の一般的な書き方の案内です。控除を受けられるかどうかの個別の判断や、申告書の作成代行はしていません。</li>
+<li>年収は「給与のみ・他に所得がない」場合の目安です。最終的には勤務先の案内や国税庁「年末調整がよくわかるページ」で確認してください。</li>
+<li>計算結果は概算です。住民税の控除額は計算していません。</li>
+<li>入力した内容はどこにも送信・保存されません。</li>
+<li>会社によってはアプリやWebで提出する場合があります。項目名は紙の申告書に合わせています。</li>
+</ul>
+</div>
+</main></div>
+
+<div id="bar">
+<div class="in">
+<div class="bl"><span id="cnt"></span><button class="lnk" id="back">← ひとつ戻る</button></div>
+<div class="ops" id="ops"></div>
+<button class="go hide" id="go">これで決定</button>
+</div>
+</div>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const SC=$('scroll');
+const toBottom=()=>{const f=()=>{SC.scrollTop=SC.scrollHeight;};f();setTimeout(f,60);setTimeout(f,300);};
+const ev=(n,p)=>{try{if(window.gtag)gtag('event',n,p||{});}catch(e){}};
+let started=false,completed=false,calcUsed=false;
+document.querySelectorAll('.line').forEach(l=>l.addEventListener('click',()=>ev('consult_click',{place:l.dataset.p||'bottom'})));
+let chatOpen=false;
+const P={ad:1,kd:0},LIM={ad:[0,6],kd:[0,8]};
+const drawP=()=>{$('adv').textContent=P.ad+'人';$('kdv').textContent=P.kd+'人';document.querySelectorAll('.step button').forEach(b=>{const t=b.dataset.t,d=+b.dataset.d;b.disabled=d<0?P[t]<=LIM[t][0]:P[t]>=LIM[t][1];});};
+document.querySelectorAll('.step button').forEach(b=>b.addEventListener('click',()=>{const t=b.dataset.t;P[t]=Math.min(LIM[t][1],Math.max(LIM[t][0],P[t]+(+b.dataset.d)));drawP();calc();}));
+const closeKb=e=>{const ae=document.activeElement;if(ae&&ae.tagName==='INPUT'&&e.target!==ae&&!(e.target.closest&&e.target.closest('input')))ae.blur();};
+document.addEventListener('touchstart',closeKb,{passive:true});
+document.addEventListener('mousedown',closeKb);
+SC.addEventListener('scroll',()=>{const ae=document.activeElement;if(ae&&ae.tagName==='INPUT'&&ae.type!=='hidden'&&ae.type!=='checkbox'){const r=ae.getBoundingClientRect(),c=SC.getBoundingClientRect();if(r.bottom<c.top||r.top>c.bottom)ae.blur();}},{passive:true});
+document.querySelectorAll('.fld input').forEach(i=>{i.setAttribute('enterkeyhint','done');i.addEventListener('keydown',e=>{if(e.key==='Enter')i.blur();});});
+$('showChat').addEventListener('click',()=>{chatOpen=!chatOpen;$('chat').classList.toggle('hide',!chatOpen);$('showChat').textContent=chatOpen?'答えた内容を閉じる ▲':'答えた内容を見る ▼';});
+const Q=[
+{id:'spouse',t:'配偶者（夫・妻）はいますか？',type:'yn'},
+{id:'spInc',t:'配偶者の今年の年収は？',s:'給与のみの場合の目安。パート代も含めた見込み額で。',type:'one',o:[['a','136万円以下'],['b','136万超〜207万円'],['c','207万円超']],show:a=>a.spouse==='yes'},
+{id:'myInc',t:'あなたの今年の年収（給与）は？',type:'one',o:[['lo','850万円以下'],['hi','850万円超']]},
+{id:'fam',t:'一緒に生活している（生計が同じ）家族は？',s:'年齢は2026年12月31日時点。あてはまるものを全部選んでね。',type:'multi',o:[['f0','0〜15歳の子'],['f16','16〜18歳の子'],['f19','19〜22歳の子'],['f23','23歳以上の家族'],['none','いない']]},
+{id:'kidInc',t:'19〜22歳のお子さんの今年のアルバイト年収は136万円以下？',s:'給与のみの場合の目安です。',type:'yn',show:a=>(a.fam||[]).includes('f19')},
+{id:'change',t:'今年、家族の変化はありましたか？',s:'結婚・出産・離婚、家族が扶養に入った・外れた など',type:'yn'},
+{id:'special',t:'障害のある家族がいる、またはあなたがひとり親・寡婦・勤労学生にあてはまる？',type:'yn'},
+{id:'life',t:'生命保険・医療保険・個人年金保険に入っていて、あなたが保険料を払っている？',s:'秋ごろに届く「控除証明書」があれば「はい」',type:'yn'},
+{id:'quake',t:'地震保険に入っていますか？',s:'火災保険だけなら「いいえ」',type:'yn'},
+{id:'social',t:'給与天引き以外で払った社会保険料はありますか？',s:'国民年金・国民健康保険など。家族の分を払った場合も含みます。',type:'yn'},
+{id:'ideco',t:'iDeCoを個人で払っている、または小規模企業共済に入っている？',s:'給与天引きのiDeCoは会社側で処理されることが多いので「いいえ」でOK',type:'yn'},
+{id:'loan',t:'住宅ローン控除の2年目以降ですか？',s:'1年目は確定申告が必要なので「いいえ」',type:'yn'}
+];
+const YN=[['yes','はい'],['no','いいえ']];
+let a={},hist=[],multi=[];
+const vis=()=>Q.filter(q=>!q.show||q.show(a));
+const cur=()=>vis().find(q=>!hist.includes(q.id));
+const has=x=>(a.fam||[]).includes(x);
+const u23=()=>has('f0')||has('f16')||(has('f19')&&a.kidInc==='yes');
+const label=q=>{const v=a[q.id],o=q.type==='yn'?YN:q.o;return q.type==='multi'?v.map(k=>o.find(x=>x[0]===k)[1]).join('・'):o.find(x=>x[0]===v)[1];};
+function react(id){
+  const v=a[id];
+  if(id==='spInc'&&v==='a')return '配偶者控除の欄が書けそうです！';
+  if(id==='spInc'&&v==='b')return '配偶者特別控除の欄が書けそうです！';
+  if(id==='fam'&&has('f0'))return '16歳未満の子は書く場所がちょっと特殊。あとでまとめて案内しますね';
+  if(id==='life'&&v==='yes'&&u23())return '今年は23歳未満の子がいると、生命保険料控除が増えるかも！';
+  return '';
+}
+const avatar='<div class="mini"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f2795a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>';
+const bot=(t,s,c)=>`<div class="row">${avatar}<div class="bot ${c||''}">${t}${s?`<small>${s}</small>`:''}</div></div>`;
+function draw(){
+  const v=vis(),q=cur();
+  let h=bot('こんにちは、きょうパパです！<br>いくつか質問するので、タップで答えてくださいね。','','tip');
+  hist.forEach(id=>{const qq=Q.find(x=>x.id===id);h+=bot(qq.t,qq.s)+`<div class="me">${label(qq)}</div>`;const r=react(id);if(r)h+=bot(r,'','tip');});
+  if(q){
+    h+=bot(q.t,q.s,'now');
+    const o=q.type==='yn'?YN:q.o,box=$('ops');
+    box.className='ops'+(q.type==='yn'?' two':'');
+    box.innerHTML=o.map(([k,l])=>`<button class="op${q.type==='yn'&&k==='yes'?' y':''}${q.type==='multi'&&multi.includes(k)?' on':''}" data-k="${k}">${l}</button>`).join('');
+    $('go').classList.toggle('hide',q.type!=='multi');$('go').disabled=!multi.length;
+    $('cnt').textContent=`質問 ${hist.length+1} / ${v.length}`;
+    $('back').disabled=!hist.length;
+    $('pg').style.width=(hist.length/v.length*100)+'%';
+    $('bar').classList.remove('hide');
+    ['after','calcCard','cta','end','done'].forEach(id=>$(id).classList.add('hide'));
+    $('chat').classList.remove('hide');$('intro').classList.remove('hide');
+  }else{
+    $('pg').style.width='100%';$('bar').classList.add('hide');
+    if(!completed){completed=true;ev('quiz_complete');}
+    result();
+  }
+  $('chat').innerHTML=h;
+  if(q)toBottom();
+}
+$('ops').addEventListener('click',e=>{
+  const b=e.target.closest('.op');if(!b)return;
+  const q=cur(),k=b.dataset.k;
+  if(!started){started=true;ev('quiz_start');}
+  if(q.type==='multi'){
+    if(k==='none')multi=multi.includes('none')?[]:['none'];
+    else{multi=multi.filter(x=>x!=='none');multi=multi.includes(k)?multi.filter(x=>x!==k):[...multi,k];}
+    draw();return;
+  }
+  a[q.id]=k;hist.push(q.id);draw();
+});
+$('go').addEventListener('click',()=>{const q=cur();if(!multi.length)return;a[q.id]=multi;multi=[];hist.push(q.id);draw();});
+$('back').addEventListener('click',()=>{const id=hist.pop();if(!id)return;if(id==='fam')multi=a.fam.slice();delete a[id];hist=hist.filter(x=>vis().some(q=>q.id===x));draw();});
+$('redo').addEventListener('click',()=>{a={};hist=[];multi=[];completed=false;draw();SC.scrollTo({top:0,behavior:'smooth'});});
+function result(){
+  const sp=a.spouse==='yes'&&a.spInc!=='c';
+  const k19ok=has('f19')&&a.kidInc==='yes',k19over=has('f19')&&a.kidInc==='no',U=u23();
+  const anyDep=sp||has('f16')||k19ok||has('f23')||k19over;
+  const docs=[];
+  const d1=[['A','基礎控除申告書（全員）','今年の給与・賞与の見込み額を合計して書き、合計所得から基礎控除額を選びます。給与所得控除は最低74万円。合計所得489万円以下なら基礎控除は104万円です。']];
+  if(sp)d1.push(['B','配偶者控除等申告書',(a.spInc==='a'?'配偶者控除の対象になりそうです（配偶者の合計所得62万円以下）。':'配偶者特別控除の対象になりそうです（配偶者の合計所得62万円超〜133万円以下）。')+'あなたの合計所得が1,000万円以下であることが条件。区分Ⅰ（あなた）と区分Ⅱ（配偶者）の交わる表で控除額を出します。']);
+  if(k19over)d1.push(['C','特定親族特別控除申告書','19〜22歳の家族の合計所得が62万円超〜123万円以下なら記入。お子さんの所得見積額を書き、表から控除額（63万〜3万円）を出します。']);
+  if(a.myInc==='hi'&&(U||a.special==='yes'))d1.push(['D','所得金額調整控除申告書','年収850万円超で、23歳未満の扶養親族や特別障害者がいる場合に記入。（給与収入−850万円）×10%、上限15万円です。']);
+  docs.push(['基礎控除申告書 兼 配偶者控除等申告書 兼 …','1枚の用紙にA〜Dの欄があります',d1]);
+  const d2=[['①','あなたの情報','氏名・住所・マイナンバーなど。印字済みでも変更がないか確認します。']];
+  if(sp)d2.push(['A','源泉控除対象配偶者','あなたの所得が900万円以下で、配偶者の合計所得が95万円以下なら記入します。']);
+  if(has('f16')||k19ok||has('f23'))d2.push(['B','控除対象扶養親族（16歳以上）','合計所得62万円以下（給与のみなら年収136万円以下が目安）の家族を書きます。'+(k19ok?'19〜22歳は「特定扶養親族」になります。':'')]);
+  if(a.special==='yes')d2.push(['C','障害者・寡婦・ひとり親・勤労学生','あてはまる項目にチェックし、内容を書きます。']);
+  if(has('f0'))d2.push(['住民税','住民税に関する事項','16歳未満の子はB欄ではなく、用紙下の「住民税に関する事項」に書きます。']);
+  if(a.change==='yes')d2.push(['異動','今年の家族の変化','今年分（令和8年分）の申告書の内容が変わった場合は、訂正して出し直します。']);
+  if(anyDep)d2.push(['改正','今年から扶養に入る家族','所得要件の引き上げで新たに対象になった家族は、「異動月日及び事由」欄に「令和8年12月1日 改正」と書きます。']);
+  docs.push(['扶養控除等（異動）申告書','来年分（令和9年分）も一緒に配られることが多いです',d2]);
+  if(['life','quake','social','ideco'].some(k=>a[k]==='yes')){
+    const d3=[];
+    if(a.life==='yes')d3.push(['生命保険','生命保険料','控除証明書の区分（一般・介護医療・個人年金、新・旧）どおりに写します。金額は「申告額（12月までの見込み）」を使います。下の計算で控除額が出せます。']);
+    if(a.life==='yes'&&U)d3.push(['新欄','年齢23歳未満の扶養親族の有無','「有」にチェックし、下の☆欄にお子さんの氏名・生年月日などを書きます。一般生命保険料（新）の上限が6万円に広がります。']);
+    if(a.quake==='yes')d3.push(['地震','地震保険料','証明書で「地震保険料」か「旧長期損害保険料」かを確認して写します。']);
+    if(a.social==='yes')d3.push(['社会保険','社会保険料','自分で払った国民年金・国民健康保険などを書きます。国民年金は控除証明書の添付が必要です。']);
+    if(a.ideco==='yes')d3.push(['iDeCo','小規模企業共済等掛金','個人で払ったiDeCo・小規模企業共済を書き、証明書を添付します。']);
+    docs.push(['保険料控除申告書','控除証明書の原本（または電子データ）を添付',d3]);
+  }
+  if(a.loan==='yes')docs.push(['住宅借入金等特別控除申告書','税務署から届いた用紙を使います',[['ローン','残高証明書と一緒に提出','金融機関から届く年末残高等証明書を見て、年末の残高などを書きます。']]]);
+  let n=0;
+  $('after').innerHTML=docs.map(([h,s,its])=>`<div class="card"><h2>${h}</h2><p class="s">${s}</p>${its.map(([t,b,p])=>`<label class="it"><input type="checkbox" id="ck${n++}"><div><b><span class="tag">${t}</span>${b}</b><p>${p}</p></div></label>`).join('')}</div>`).join('');
+  $('u23').checked=U;calc();
+  ['after','cta','end','done'].forEach(id=>$(id).classList.remove('hide'));
+  $('intro').classList.add('hide');$('chat').classList.add('hide');chatOpen=false;$('showChat').textContent='答えた内容を見る ▼';
+  $('calcCard').classList.toggle('hide',a.life!=='yes');
+  SC.scrollTop=0;setTimeout(()=>{SC.scrollTop=0;},60);
+}
+$('after').addEventListener('change',e=>{const l=e.target.closest('.it');if(l)l.classList.toggle('done',e.target.checked);});
+const up=Math.ceil;
+const nw=x=>x<=20000?x:x<=40000?up(x/2+10000):x<=80000?up(x/4+20000):40000;
+const nwS=x=>x<=30000?x:x<=60000?up(x/2+15000):x<=120000?up(x/4+30000):60000;
+const od=x=>x<=25000?x:x<=50000?up(x/2+12500):x<=100000?up(x/4+25000):50000;
+const mix=(n,o,fn,cap)=>n&&o?Math.max(od(o),Math.min(fn(n)+od(o),cap)):n?fn(n):o?od(o):0;
+const yen=v=>v.toLocaleString('ja-JP')+'円';
+const val=id=>{const v=parseInt(($(id).value||'').replace(/[^0-9]/g,''),10);return isNaN(v)?0:v;};
+function calc(){
+  const s=$('u23').checked,[n1,o1,k,n2,o2]=['c1','c2','c3','c4','c5'].map(val);
+  const g=mix(n1,o1,s?nwS:nw,s?60000:40000),g0=mix(n1,o1,nw,40000),kv=nw(k),p=mix(n2,o2,nw,40000);
+  const t=Math.min(g+kv+p,120000),t0=Math.min(g0+kv+p,120000);
+  $('tot').textContent=yen(t);
+  $('bd').innerHTML=[['一般生命保険料',g],['介護医療保険料',kv],['個人年金保険料',p]].map(([l,v])=>`<tr><td>${l}</td><td>${yen(v)}</td></tr>`).join('')+(g+kv+p>120000?'<tr><td colspan="2">合計の上限12万円で頭打ち</td></tr>':'');
+  const prot=n1+o1+k,mon=Math.round(prot/12),std=P.ad*5000+P.kd*2000,pe=$('per');
+  if(prot&&std){const ov=mon-std;pe.className='per'+(ov>0?' warn':'');pe.innerHTML=`あなたの保険料 月 <span class="n">${yen(mon)}</span><br>家族の目安 月 ${yen(std)}`+(ov>0?`<br>目安より月 ${yen(ov)} 多く、払いすぎの可能性があります。一度確認しましょう。`:'<br>目安の範囲内です。保障内容が家族に合っているかも確認を。');}
+  else if(prot){pe.className='per';pe.textContent='人数を選ぶと、家族の目安と比べられます。';}else{pe.textContent='';}
+  $('plus').textContent=s?(t>t0?`子育て特例で控除額が ${yen(t-t0)} 増えています！`:'子育て特例を反映済み。新契約の一般生命保険料が多いほど効果があります。'):'23歳未満の扶養親族がいると、新契約の一般生命保険料の上限が4万円→6万円に広がります（全体の上限12万円は同じ）。';
+}
+['u23','c1','c2','c3','c4','c5'].forEach(id=>$(id).addEventListener('input',()=>{calc();if(!calcUsed&&id!=='u23'){calcUsed=true;ev('calc_use');}}));
+drawP();
+draw();
+}
+</script>
+</body>
+</html>
